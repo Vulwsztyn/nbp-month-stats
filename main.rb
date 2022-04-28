@@ -1,5 +1,4 @@
 require 'date'
-require 'pry'
 require 'httparty'
 require 'hash_dot'
 
