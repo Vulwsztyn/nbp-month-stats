@@ -17,7 +17,7 @@ def main
     month = ARGV.length > 1 ? ARGV[1].to_i : Date.today.month
     year = ARGV.length > 2 ? 2000+ARGV[2].to_i : Date.today.year
     
-    start_date = Date.new(year, month - 1, -1)
+    start_date = month > 1 ? Date.new(year, month - 1, -1) : Date.new(year - 1, 12, -1)
     end_date = Date.new(year, month, -1) > Date.today ? Date.today : Date.new(year, month, -1)
 
     if start_date > Date.today
