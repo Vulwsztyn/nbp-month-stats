@@ -9,4 +9,4 @@ Look for the lowest price of a particular currency in particular month
 
 ### Dockerised
 1. `docker-compose up -d`
-2. `docker-compose exec web ruby main.rb currency month year` e.g. `ruby main.rb USD 4 22` - all params are optional and defualt to USD and current month
+2. `docker compose run app ruby main.rb currency month year` e.g. `ruby main.rb USD 4 22` - all params are optional and defualt to USD and current month
