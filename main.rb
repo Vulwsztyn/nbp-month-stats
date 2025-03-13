@@ -9,7 +9,7 @@ def process_response(response, currency)
   data = response.map do |day|
     [day.effectiveDate, day.rates.find {|x| x.code == currency}.mid]
   end.sort_by {|x| x[1]}
-  puts data.map {|x| "#{x[0]} #{x[1]}"}.join("\n")
+  puts data.map {|x| "#{x[0]} #{'%.4f' % x[1]}"}.join("\n")
 end
 
 def main
